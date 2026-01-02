@@ -3,7 +3,7 @@ services:
     image: flowlogix/mirror-immich
     container_name: photos
     ports:
-      - "9090:8080"
+      - "${SERVER_PORT:-9090}:8080"
     env_file:
       - path: defaults.env
         required: true
@@ -13,6 +13,6 @@ services:
       - HOST_USER_HOME=${HOME}
       - localtime_path=/home/flowlogix/var/host-etc/localtime
     volumes:
-      - ${HOME}/Pictures:${HOME}/Pictures
+      - ${PICTURES_DIRECTORY:-${HOME}/Pictures}:${PICTURES_DIRECTORY:-${HOME}/Pictures}
       - /etc:/home/flowlogix/var/host-etc:ro
     restart: unless-stopped
