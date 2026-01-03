@@ -17,6 +17,18 @@ This directory can then be rsync'd to Immich external library.
 == Installation
 Docker Compose is the recommended installation method.
 
+You can create `.env` file with the following variables:
+[source,dotenv]
+----
+IMMICH_API_URL=https://my.immich.instance
+IMMICH_API_KEY=<my_immich_api_key>
+
+# Override default photos library location and names if needed
+# PICTURES_DIRECTORY=${HOME}/Pictures
+# PHOTOS_LIBRARY_NAME=Photos Library
+# EXTRACTED_PHOTOS_NAME=extracted-photos
+----
+
 NOTE: Docker needs to have "full dick access" to be able to read Photos library
 
 == Screenshots
