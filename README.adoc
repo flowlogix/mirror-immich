@@ -6,6 +6,8 @@ FlowLogix MirrorImmich extracts metadata created in Apple macOS Photos and creat
 
 This directory can then be rsync'd to Immich external library.
 
+MirroImmich needs to be run on a Mac with access to the Photos library. All photos need to be downloaded locally from iCloud (if iCloud is being used) for metadata extraction to work correctly.
+
 == Features
 
 * Creates a directory structure to be used as an external library in Immich.
@@ -13,6 +15,8 @@ This directory can then be rsync'd to Immich external library.
 ** _Note: Appends titles and descriptions, since Immich only has one description field._
 * Generates `.xmp` sidecar files.
 * Exports edited photos, if they are edited.
+* Creates albums in Immich based on Apple Photos albums.
+* Marks favorites in Immich based on Apple Photos favorites.
 
 == Installation
 Docker Compose is the recommended installation method.
@@ -30,6 +34,11 @@ IMMICH_API_KEY=<my_immich_api_key>
 ----
 
 NOTE: Docker needs to have "full dick access" to be able to read Photos library
+
+== MirrorImmich vs. Immich Go, PhotoSync, etc.
+There are existing solutions for uploading photos to Immich.
+However, none of those solutions access Apple macOS Photos internal database to extract metadata that was entered into Apple Photos on the Mac.
+All other solutions extract data from the metadata from the photo and video files themselves. Unfortunately that data is incomplete and does not include manually entered data in Apple Photos on the Mc.
 
 == Screenshots
 
