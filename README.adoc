@@ -1,0 +1,50 @@
+= MirrorImmich
+:toc: macro
+:toc-title: Table of Contents
+
+Over the past year, I have been battling with properly exporting and syncing my Apple Photos on the Mac (33k of them) with Immich. I have tried about 40 options that exist now. Nothing works 100%.
+
+The problem is that macOS Photos stores all metadata in a SQLite database, and not in the photo/video files themselves. That database schema is complex and often messy. Since this metadata isn't 100% compatible with Immich, it needs to be processed before being put into `.xmp` sidecar files. This is where existing options fall short, often failing to preserve 100% of the metadata.
+
+MirrorImmich is a custom exporter developed to solve this specific problem.
+
+== Features
+
+* Creates a directory structure to be used as an external library in Immich.
+* Exports titles, descriptions, and keywords.
+** _Note: Appends titles and descriptions, since Immich only has one description field._
+* Generates `.xmp` sidecar files.
+* Exports edited photos, if they are edited.
+
+=== Roadmap / TODOs
+
+* [ ] Create the album structure in Immich that exists in Photos.
+* [ ] Mark photos as favorite in Immich that were favorite in Photos.
+* [ ] Progressive export - only export what hasn't been exported already.
+* [ ] Delete from Immich what was deleted from Photos.
+* [ ] Create a structure in which Edited videos can be exported (since Photos doesn't store those directly).
+
+== Screenshots
+
+Here is the configuration screen: +
+https://photos.flowlogix.com/share/D-1UluOb68QTV_CVIU4VJstM6b57BmP4gd-Nw01FMTodR_t-BvlLWqHI-osEWNRaIEA/photos/c6ac47ba-c5f9-4edb-bee3-770bad2b3c8f[Configuration Screen]
+
+Here is the result screen from a test run. As you can see, the results are read from the Photos SQLite database: +
+https://photos.flowlogix.com/share/D-1UluOb68QTV_CVIU4VJstM6b57BmP4gd-Nw01FMTodR_t-BvlLWqHI-osEWNRaIEA/photos/04b9e182-6236-4781-a117-fb901335154f[Result Screen]
+
+=== Metadata Comparison
+
+**Apple Photos Info Panel:** +
+As you can see, it is marked as Favorite. It has a title, description, and keywords. With iCloud and almost all other services, only "my description" gets transferred. Some will take keywords, but none transfer all metadata. +
+https://photos.flowlogix.com/share/D-1UluOb68QTV_CVIU4VJstM6b57BmP4gd-Nw01FMTodR_t-BvlLWqHI-osEWNRaIEA/photos/605b3d12-3726-4c26-afc0-6c5ad1cc9398[Photos Info Panel]
+
+**Desired Result in Immich:** +
+The Photos title and description are combined into Immich's description field. +
+https://photos.flowlogix.com/share/D-1UluOb68QTV_CVIU4VJstM6b57BmP4gd-Nw01FMTodR_t-BvlLWqHI-osEWNRaIEA/photos/f8e4b545-6897-490c-a8d0-81072ad405bd[Immich Result]
+
+**Tags in Immich:** +
+https://photos.flowlogix.com/share/D-1UluOb68QTV_CVIU4VJstM6b57BmP4gd-Nw01FMTodR_t-BvlLWqHI-osEWNRaIEA/photos/3301dc0a-e89e-485c-a76e-c308660feb97[Immich Tags]
+
+== Contributing
+
+If anybody is interested in it and/or wants to help me finish it up (or has any other feedback), please let me know.
