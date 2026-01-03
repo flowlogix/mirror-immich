@@ -1,12 +1,10 @@
-= MirrorImmich
+= FlowLogix MirrorImmich
 :toc: macro
 :toc-title: Table of Contents
 
-Over the past year, I have been battling with properly exporting and syncing my Apple Photos on the Mac (33k of them) with Immich. I have tried about 40 options that exist now. Nothing works 100%.
+FlowLogix MirrorImmich extracts metadata created in Apple macOS Photos and creates a directory that includes symlinks to photos and their extracted metadata in sidecar .xmp files.
 
-The problem is that macOS Photos stores all metadata in a SQLite database, and not in the photo/video files themselves. That database schema is complex and often messy. Since this metadata isn't 100% compatible with Immich, it needs to be processed before being put into `.xmp` sidecar files. This is where existing options fall short, often failing to preserve 100% of the metadata.
-
-MirrorImmich is a custom exporter developed to solve this specific problem.
+This directory can then be rsync'd to Immich external library.
 
 == Features
 
@@ -16,13 +14,10 @@ MirrorImmich is a custom exporter developed to solve this specific problem.
 * Generates `.xmp` sidecar files.
 * Exports edited photos, if they are edited.
 
-=== Roadmap / TODOs
+== Installation
+Docker Compose is the recommended installation method.
 
-* [ ] Create the album structure in Immich that exists in Photos.
-* [ ] Mark photos as favorite in Immich that were favorite in Photos.
-* [ ] Progressive export - only export what hasn't been exported already.
-* [ ] Delete from Immich what was deleted from Photos.
-* [ ] Create a structure in which Edited videos can be exported (since Photos doesn't store those directly).
+NOTE: Docker needs to have "full dick access" to be able to read Photos library
 
 == Screenshots
 
@@ -48,3 +43,10 @@ https://photos.flowlogix.com/share/D-1UluOb68QTV_CVIU4VJstM6b57BmP4gd-Nw01FMTodR
 == Contributing
 
 If anybody is interested in it and/or wants to help me finish it up (or has any other feedback), please let me know.
+
+== The Story
+Over the past year, I have been battling with properly exporting and syncing my Apple Photos on the Mac (33k of them) with Immich. I have tried about 40 options that exist now. Nothing works 100%.
+
+The problem is that macOS Photos stores all metadata in a SQLite database, and not in the photo/video files themselves. That database schema is complex and often messy. Since this metadata isn't 100% compatible with Immich, it needs to be processed before being put into `.xmp` sidecar files. This is where existing options fall short, often failing to preserve 100% of the metadata.
+
+MirrorImmich is a custom exporter developed to solve this specific problem.
