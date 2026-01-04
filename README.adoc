@@ -33,7 +33,7 @@ IMMICH_API_KEY=<my_immich_api_key>
 # EXTRACTED_PHOTOS_NAME=extracted-photos
 ----
 
-NOTE: Docker needs to have "full dick access" to be able to read Photos library
+NOTE: Docker needs to have "full disk access" to be able to read Photos library
 
 == Official web site
 https://flowlogix.com/mirror-immich.html[Mirror Immich web site]
