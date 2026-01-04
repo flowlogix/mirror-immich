@@ -38,7 +38,7 @@ NOTE: Docker needs to have "full dick access" to be able to read Photos library
 == MirrorImmich vs. Immich Go, PhotoSync, etc.
 There are existing solutions for uploading photos to Immich.
 However, none of those solutions access Apple macOS Photos internal database to extract metadata that was entered into Apple Photos on the Mac.
-All other solutions extract data from the metadata from the photo and video files themselves. Unfortunately that data is incomplete and does not include manually entered data in Apple Photos on the Mc.
+All other solutions extract data from the metadata from the photo and video files themselves. Unfortunately that data is incomplete and does not include manually entered data in Apple Photos on the Mac.
 
 == Screenshots
 
