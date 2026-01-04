@@ -2,7 +2,7 @@
 :toc: macro
 :toc-title: Table of Contents
 
-FlowLogix MirrorImmich extracts metadata created in Apple macOS Photos and creates a directory that includes symlinks to photos and their extracted metadata in sidecar .xmp files.
+FlowLogix MirrorImmich extracts title, description, tags and album information created in Apple macOS Photos and creates a directory that includes symlinks to photos and their extracted metadata in sidecar .xmp files.
 
 This directory can then be rsync'd to Immich external library.
 
