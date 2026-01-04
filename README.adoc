@@ -35,6 +35,9 @@ IMMICH_API_KEY=<my_immich_api_key>
 
 NOTE: Docker needs to have "full dick access" to be able to read Photos library
 
+== Official web site
+https://flowlogix.com/mirror-immich.html[Mirror Immich web site]
+
 == MirrorImmich vs. Immich Go, PhotoSync, etc.
 There are existing solutions for uploading photos to Immich.
 However, none of those solutions access Apple macOS Photos internal database to extract metadata that was entered into Apple Photos on the Mac.
