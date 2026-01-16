@@ -27,6 +27,9 @@ You can create `.env` file with the following variables:
 IMMICH_API_URL=https://my.immich.instance
 IMMICH_API_KEY=<my_immich_api_key>
 
+# Optional: set maximum memory heap size (default is 512m)
+# MAX_HEAP_SIZE=2g
+
 # Override default photos library location and names if needed
 # PICTURES_DIRECTORY=${HOME}/Pictures
 # PHOTOS_LIBRARY_NAME=Photos Library
