@@ -21,7 +21,12 @@ MirroImmich needs to be run on a Mac with access to the Photos library. All phot
 == Installation
 Docker Compose is the recommended installation method.
 
-You can create `.env` file with the following variables:
+* Download https://raw.githubusercontent.com/flowlogix/mirror-immich/refs/heads/main/docker-compose.yaml[Docker Compose] and
+https://raw.githubusercontent.com/flowlogix/mirror-immich/refs/heads/main/defaults.env[Default Environment] files.
+* Run `docker compose up -d` to start the container.
+* Browse http://localhost:9090 to access MirrorImmich.
+
+You can also create `.env` file with the following variables:
 [source,dotenv]
 ----
 IMMICH_API_URL=https://my.immich.instance
@@ -37,6 +42,9 @@ IMMICH_API_KEY=<my_immich_api_key>
 ----
 
 NOTE: Docker needs to have "full disk access" to be able to read Photos library
+
+NOTE: New releases are uploaded on Docker Hub and
+release date in this repository does not indicate latest update to the Docker image.
 
 == Official web site
 https://flowlogix.com/mirror-immich.html[Mirror Immich web site]
