@@ -36,6 +36,9 @@ IMMICH_API_KEY=<my_immich_api_key>
 # Optional: set maximum memory heap size (default is 512m)
 # MAX_HEAP_SIZE=2g
 
+# Optional: set batch size for processing photos (default is 1000)
+# PHOTOS_BATCH_SIZE=1000
+
 # Override default photos library location and names if needed
 # PICTURES_DIRECTORY=${HOME}/Pictures
 # PHOTOS_LIBRARY_NAME=Photos Library
