@@ -18,6 +18,9 @@ MirroImmich needs to be run on a Mac with access to the Photos library. All phot
 * Creates albums in Immich based on Apple Photos albums.
 * Marks favorites in Immich based on Apple Photos favorites.
 
+== News
+* Apr 19, 2026: Memory requirements are significantly reduced by processing photos in batches. This allows processing of large libraries on machines with limited memory. See #16 for details.
+
 == Installation
 Docker Compose is the recommended installation method.
 
@@ -33,9 +36,6 @@ with the following variables:
 IMMICH_API_URL=https://my.immich.instance
 IMMICH_API_KEY=<my_immich_api_key>
 
-# Optional: set maximum memory heap size (default is 512m)
-# MAX_HEAP_SIZE=2g
-
 # Optional: set batch size for processing photos (default is 1000)
 # PHOTOS_BATCH_SIZE=1000
 
@@ -43,6 +43,9 @@ IMMICH_API_KEY=<my_immich_api_key>
 # PICTURES_DIRECTORY=${HOME}/Pictures
 # PHOTOS_LIBRARY_NAME=Photos Library
 # EXTRACTED_PHOTOS_NAME=extracted-photos
+
+# Optional: set maximum memory heap size (default is 512m)
+# MAX_HEAP_SIZE=2g
 ----
 
 NOTE: Docker needs to have "full disk access" to be able to read Photos library
