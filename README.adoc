@@ -22,6 +22,7 @@ MirroImmich needs to be run on a Mac with access to the Photos library. All phot
 If you find Mirror Immich useful, please consider supporting it on https://github.com/sponsors/flowlogix[GitHub Sponsors] as it will help dedicate more time to it and add more features.
 
 == News
+* Jul 5, 2026: MirrorImmich now fully supports Immich 3.x or later, as well as retaining compatibility with earlier versions of Immich
 * Apr 19, 2026: Memory requirements are significantly reduced by processing photos in batches. This allows processing of large libraries on machines with limited memory. See https://github.com/flowlogix/mirror-immich/issues/16[Issue #16] for details.
 
 == Installation
