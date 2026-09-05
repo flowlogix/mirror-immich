@@ -22,6 +22,7 @@ MirroImmich needs to be run on a Mac with access to the Photos library. All phot
 If you find Mirror Immich useful, please consider supporting it on https://github.com/sponsors/flowlogix[GitHub Sponsors] as it will help dedicate more time to it and add more features.
 
 == News
+* Aug 15, 2026: We continue to improve MirrorImmich. We added ease of use and error handling improvements.
 * Jul 5, 2026: MirrorImmich now fully supports Immich 3.x or later, as well as retaining compatibility with earlier versions of Immich
 * Apr 19, 2026: Memory requirements are significantly reduced by processing photos in batches. This allows processing of large libraries on machines with limited memory. See https://github.com/flowlogix/mirror-immich/issues/16[Issue #16] for details.
 
@@ -89,7 +90,7 @@ https://photos.flowlogix.com/share/D-1UluOb68QTV_CVIU4VJstM6b57BmP4gd-Nw01FMTodR
 
 == Contributing
 
-If anybody is interested in it and/or wants to help me finish it up (or has any other feedback), please let me know.
+If anybody is interested in it and/or wants to help me add features (or has any other feedback), please let me know.
 
 == The Story
 Over the past year, I have been battling with properly exporting and syncing my Apple Photos on the Mac (33k of them) with Immich. I have tried about 40 options that exist now. Nothing works 100%.
@@ -97,3 +98,5 @@ Over the past year, I have been battling with properly exporting and syncing my 
 The problem is that macOS Photos stores all metadata in a SQLite database, and not in the photo/video files themselves. That database schema is complex and often messy. Since this metadata isn't 100% compatible with Immich, it needs to be processed before being put into `.xmp` sidecar files. This is where existing options fall short, often failing to preserve 100% of the metadata.
 
 MirrorImmich is a custom exporter developed to solve this specific problem.
+
+image:https://static.scarf.sh/a.png?x-pxid=f3156d5e-38e7-40ce-8f3b-e76153eec2f4&page=README.adoc[,0,0]
