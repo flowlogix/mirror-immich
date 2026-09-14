@@ -2,9 +2,9 @@
 :toc: macro
 :toc-title: Table of Contents
 
-FlowLogix MirrorImmich extracts title, description, tags, GPS location and album information created in Apple macOS Photos and creates a directory that includes symlinks to photos and their extracted metadata in sidecar .xmp files.
+FlowLogix MirrorImmich extracts and syncs title, description, tags, GPS location and album information created in Apple macOS Photos and creates a directory that includes symlinks to photos and their extracted metadata in sidecar .xmp files.
 
-This directory can then be rsync'd to Immich external library.
+This directory can then be rsync'd to Immich external library. These steps are the safest way to continuously sync Apple Photos with Immich, since it preserves all metadata and avoids any potential issues with Immich's internal database.
 
 MirroImmich needs to be run on a Mac with access to the Photos library. All photos need to be downloaded locally from iCloud (if iCloud is being used) for metadata extraction to work correctly.
 
